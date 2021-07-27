@@ -8,3 +8,9 @@ Most of the code is in /shared to keep things DRY.  Don't expect anything life-c
 The Github access is done using their GraphQL API.
 
 ## Environment variables you will need to set:
+
+| Variable | Description |
+| -------- | ----------- |
+| SLACK_WEBHOOK | The full URL of the Slack webhook to use for sending messages. |
+| SLACK_CHANNEL | Which channel to post to — can also be a user like `@paul` for testing. |
+| GITHUB_PERSONAL_ACCESS_TOKEN | Github token to use when searching for PR info. |

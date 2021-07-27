@@ -2,8 +2,9 @@
 slothbot
 
 @scheduled
-daily-standup cron(15 4 * * ? *)
-daily-standdown cron(17 4 * * ? *)
+# These times are in UTC and will therefore break horribly during DST 😰
+daily-standup cron(15 20 * * ? *)
+daily-standdown cron(15 3 * * ? *)
 
 @aws
 profile slothsquad

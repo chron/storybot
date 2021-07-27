@@ -1,4 +1,4 @@
-const shuffle = require('array-shuffle');
+const shuffle = require('@architect/shared/shuffle');
 
 module.exports = function standup(users, userNames) {
   const [main, backup] = shuffle(users);
