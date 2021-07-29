@@ -13,18 +13,18 @@ exports.handler = async function() {
 
   const message = [
     standDown(dayOfWeek !== 5), // No standdown on Fridays!
-    await pullRequests(
+    await pullRequests({
       users,
-      ['1. Ready for code review'],
-      'Pull requests with code review label that still need reviewers:',
-      (pr) => pr.author && pr.assignees.length < 2
-    ),
-    await pullRequests(
+      labels: ['1. Ready for code review'],
+      message: 'Pull requests with code review label that still need reviewers:',
+      filterCriteria: (pr) => pr.author && pr.assignees.length < 2
+    }),
+    await pullRequests({
       users,
-      ['3. Ready for testing', 'Combo'],
-      'Pull requests in testing that still have people assigned:',
-      (pr) => pr.author && pr.assignees.length > 0
-    ),
+      labels: ['3. Ready for testing', 'Combo'],
+      message: 'Pull requests in testing that still have people assigned:',
+      filterCriteria: (pr) => pr.author && pr.assignees.length > 0
+    }),
   ].filter(v => v).join("\n\n");
 
   return slackMessage(message);

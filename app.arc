@@ -6,6 +6,9 @@ slothbot
 daily-standup cron(15 20 * * ? *)
 daily-standdown cron(15 3 * * ? *)
 
+@http
+post /command/prs
+
 @aws
 profile slothsquad
 region ap-southeast-2

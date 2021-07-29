@@ -9,14 +9,24 @@ function prToString(pr) {
   return `• <${pr.url}|${pr.title}> (${readyDaysAgo}*${pr.delta}*) — Assigned: [${pr.assignees.join(', ')}]`;
 }
 
-module.exports = async function pullRequests(users, labels, message, filterCriteria) {
+module.exports = async function pullRequests({
+  users,
+  labels,
+  message,
+  filterCriteria,
+  ignoreUser,
+}) {
   try {
     const githubPRs = await Promise.all(labels.map(async label => {
       console.log(`Getting PRs for ${label}`);
 
+      let search = 'SLOW- in:title org:storypark is:open is:pr'
+      if (label) { search += ` label:\\"${label}\\"`; }
+      if (ignoreUser) { search += ` -author:${ignoreUser} -assignee:${ignoreUser}`; }
+
       const query = `
         query {
-          search(query: "org:storypark is:open is:pr label:\\"${label}\\" SLOW- in:title", type: ISSUE, first: 20) {
+          search(query: "${search}", type: ISSUE, first: 20) {
             edges {
               node {
                 ... on PullRequest {
