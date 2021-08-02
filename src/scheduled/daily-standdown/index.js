@@ -27,5 +27,5 @@ exports.handler = async function() {
     }),
   ].filter(v => v).join("\n\n");
 
-  return slackMessage(message);
+  return slackMessage({ message });
 }

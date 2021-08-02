@@ -14,7 +14,6 @@ You'll need an AWS profile called `slothsquad` set up in your `~/.aws/credential
 | Variable | Description |
 | -------- | ----------- |
 | SLACK_WEBHOOK | The full URL of the Slack webhook to use for sending messages. |
-| SLACK_CHANNEL | Which channel to post to — can also be a user like `@paul` for testing. |
 | GITHUB_PERSONAL_ACCESS_TOKEN | Github token to use when searching for PR info. |
 
 Once you have that in place you can run
