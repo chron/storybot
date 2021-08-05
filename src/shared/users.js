@@ -9,6 +9,7 @@ module.exports.users = {
   fourseven: '<@U0431G60W>', // Mathew
   BecsController: '<@UDA74E8JV>', // Becs
   zugolosian: '<@UKJT8KV0T>', // Davey
+  DanielJCampbell: '<@U019E1F5W85>', // Daniel
 };
 
 module.exports.standupCaptains = [
