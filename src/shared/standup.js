@@ -12,7 +12,7 @@ If they aren't available, the backup sloth is :sloth: ${userNames[backup]} :slot
 *1.* What did you do yesterday? What is your plan for today?
 *2.* Anything you need help with?  Do you have capacity to help others?
 *3.* Any updates for the team?
-*4.* _<question of the day>_
+*4.* _<question of the day>_ (if there's time :grimacing:)
 
 If you need ideas for a question of the day, <https://andyhansen.co.nz/posts/stand-up-bonus-question|this> is a great list.`;
 }

@@ -11,7 +11,7 @@ exports.handler = async function() {
   const dateInNZST = utcToZonedTime(new Date(), 'Pacific/Auckland');
   const dayOfWeek = dateInNZST.getDay();
 
-  const message = [
+  const text = [
     standDown(dayOfWeek !== 5), // No standdown on Fridays!
     await pullRequests({
       users,
@@ -27,5 +27,5 @@ exports.handler = async function() {
     }),
   ].filter(v => v).join("\n\n");
 
-  return slackMessage({ message });
+  return slackMessage({ text });
 }

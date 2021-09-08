@@ -7,7 +7,7 @@ const shouldIRun = require('@architect/shared/shouldIRun');
 exports.handler = async function() {
   if (!shouldIRun()) { return; }
 
-  const message = [
+  const text = [
     standup(standupCaptains, users),
     await pullRequests({
       users,
@@ -23,5 +23,5 @@ exports.handler = async function() {
     }),
   ].filter(v => v).join("\n\n");
 
-  return slackMessage({ message });
+  return slackMessage({ text });
 }
