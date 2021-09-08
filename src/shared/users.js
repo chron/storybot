@@ -10,6 +10,7 @@ module.exports.users = {
   BecsController: '<@UDA74E8JV>', // Becs
   zugolosian: '<@UKJT8KV0T>', // Davey
   DanielJCampbell: '<@U019E1F5W85>', // Daniel
+  AlexQuinlivan: '<@U08R7BSLR>', // Alex
 };
 
 module.exports.standupCaptains = [
