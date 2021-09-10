@@ -7,12 +7,12 @@ module.exports.handler = async function(event) {
   const params = Object.fromEntries(bodyParams);
 
   const [command, ...restOfInput] = params.text.split(' ');
-  const memeUrl = restOfInput.join(' ');
+  const memeUrl = restOfInput.join(' ').replace(/^\<|>$/g, '');
 
   let responseText;
 
   if (command === 'meme') {
-    if (memeUrl.match(/^https?:\/\//)) {
+    if (memeUrl.match(/^\https?:\/\//)) {
       let data = await arc.tables();
       await data.memes.put({
         memeID: nanoid(),
@@ -27,9 +27,13 @@ module.exports.handler = async function(event) {
     }
   } else if (command === 'memelist') {
     let data = await arc.tables();
-    responseText = (await data.memes.scan()).Items.map((meme) => {
-      return `• ${meme.url} (from <@${meme.createdBy}>)`;
-    }).join("\n");
+    const memes = (await data.memes.scan()).Items
+
+    if (memes.length) {
+      responseText = memes.map((meme) => `• ${meme.url} (from <@${meme.createdBy}>)`).join("\n");
+    } else {
+      responseText = 'No memes yet.';
+    }
   } else {
     responseText = `Invalid command! Try ${params.command} meme ...`;
   }
