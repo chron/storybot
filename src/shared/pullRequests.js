@@ -20,7 +20,7 @@ module.exports = async function pullRequests({
     const githubPRs = await Promise.all(labels.map(async label => {
       console.log(`Getting PRs for ${label}`);
 
-      let search = 'SLOW- OR GIRAFFE- in:title org:storypark is:open is:pr'
+      let search = 'SLOW- OR GIRA- in:title org:storypark is:open is:pr'
       if (label) { search += ` label:\\"${label}\\"`; }
       if (ignoreUser) { search += ` -author:${ignoreUser} -assignee:${ignoreUser}`; }
 
