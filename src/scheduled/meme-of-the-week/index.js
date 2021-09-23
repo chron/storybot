@@ -2,15 +2,30 @@ const arc = require('@architect/functions');
 const slackMessage = require('@architect/shared/slackMessage');
 
 exports.handler = async function() {
-  console.log('Getting memes from DynamoDB');
+  console.log('Getting pending memes from DynamoDB');
 
   const data = await arc.tables();
-  const memes = (await data.memes.scan()).Items
-  const memeList = memes.map((meme) => {
+  const pendingMemes = (await data.memes.scan({
+    FilterExpression: 'attribute_not_exists(isPosted)',
+  })).Items;
+
+  const memeList = pendingMemes.map((meme) => {
     return `• ${meme.url} (from <@${meme.createdBy}>)`;
   }).join("\n");
 
-  console.log(`${memes.length} memes obtained.`);
+  console.log(`${pendingMemes.length} memes obtained.`);
+
+  console.log('Marking memes as posted');
+
+  await Promise.all(pendingMemes.map(meme => {
+    return data.memes.update({
+      Key: { memeID: meme.memeID },
+      UpdateExpression: 'set isPosted = :isPosted',
+      ExpressionAttributeValues: {
+        ':isPosted' : true,
+      }
+    });
+  }));
 
   // TODO: handle 0 items
 

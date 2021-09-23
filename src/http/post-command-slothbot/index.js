@@ -25,15 +25,6 @@ module.exports.handler = async function(event) {
     } else {
       responseText = 'Please provide a valid URL.';
     }
-  } else if (command === 'memelist') {
-    let data = await arc.tables();
-    const memes = (await data.memes.scan()).Items
-
-    if (memes.length) {
-      responseText = memes.map((meme) => `• ${meme.url} (from <@${meme.createdBy}>)`).join("\n");
-    } else {
-      responseText = 'No memes yet.';
-    }
   } else {
     responseText = `Invalid command! Try ${params.command} meme ...`;
   }
