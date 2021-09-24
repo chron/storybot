@@ -3,9 +3,9 @@ slothbot
 
 @scheduled
 # These times are in UTC and will therefore break horribly during DST 😰
-daily-standup cron(15 20 * * ? *)
-daily-standdown cron(15 3 * * ? *)
-meme-of-the-week cron(0 22 ? * THU *)
+daily-standup cron(15 19 * * ? *)
+daily-standdown cron(15 2 * * ? *)
+meme-of-the-week cron(0 21 ? * THU *)
 
 @http
 get /memes
