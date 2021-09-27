@@ -4,7 +4,7 @@ slothbot
 @scheduled
 # These times are in UTC and will therefore break horribly during DST 😰
 daily-standup cron(15 19 * * ? *)
-daily-standdown cron(15 2 * * ? *)
+daily-standdown cron(45 1 * * ? *)
 meme-of-the-week cron(0 21 ? * THU *)
 
 @http
