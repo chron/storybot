@@ -10,10 +10,8 @@ If they aren't available, the backup sloth is :sloth: ${userNames[backup]} :slot
 *1.* What is blocking you?
 *2.* What help do you need?
 *3.* What comms need to happen?
-*4.* _<question of the day>_ (if there's time :grimacing:)
+*4.* _<question of the day>_ (<https://andyhansen.co.nz/posts/stand-up-bonus-question|inspiration list>)
 *5.* _Incoherent developer noises_
 
-If you need ideas for a question of the day, <https://andyhansen.co.nz/posts/stand-up-bonus-question|this> is a great list.
-
-You can see an up-to-date list of our in-flight PRs at <https://sloth.engineering/today/|sloth.engineering>, or use the \`/prs\` slash command.`;
+You can see our in-flight PRs at <https://sloth.engineering/today/|sloth.engineering>, or use the \`/prs\` slash command.`;
 }

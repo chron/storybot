@@ -27,8 +27,6 @@ exports.handler = async function() {
     });
   }));
 
-  // TODO: handle 0 items
-
   console.log('Generating message');
 
   const text = `Slothbot 9000 presents *MEME OF THE WEEK*!
