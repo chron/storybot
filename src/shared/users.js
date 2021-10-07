@@ -11,6 +11,7 @@ module.exports.users = {
   zugolosian: '<@UKJT8KV0T>', // Davey
   DanielJCampbell: '<@U019E1F5W85>', // Daniel
   AlexQuinlivan: '<@U08R7BSLR>', // Alex
+  AaronThornton00: '<@U048FJY1K>', // Aaron
 };
 
 module.exports.standupCaptains = [
