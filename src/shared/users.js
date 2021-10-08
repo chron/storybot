@@ -12,8 +12,11 @@ module.exports.users = {
   DanielJCampbell: '<@U019E1F5W85>', // Daniel
   AlexQuinlivan: '<@U08R7BSLR>', // Alex
   AaronThornton00: '<@U048FJY1K>', // Aaron
-};
 
-module.exports.standupCaptains = [
-  'libbyschuknight', 'marielleaurabelle', 'chron', 'timothyjohn2015', 'willsmart'
-];
+  // These ones aren't github usernames because these people aren't on github:
+
+  katie: '<@U01KA1D3G78>', // Katie
+  shannon: '<@U01N1BGP7K6>', // Shannon
+  gavin: '<@U028PC9MZAB>', // Gavin
+  andrew: '<@U06286ZSM>', // Andrew
+};

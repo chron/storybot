@@ -17,7 +17,7 @@ const MONDAYISED_HOLIDAYS = [ // Don't forget months are indexed from zero 🤡
   return d;
 });
 
-module.exports = function shouldIRun() {
+module.exports = function shouldIRun(_teamConfig) {
   // Remove this if you want to test the scheduled tasks in the staging environment
   if (process.env.NODE_ENV === 'staging') { return false; }
 

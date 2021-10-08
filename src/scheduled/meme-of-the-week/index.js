@@ -1,35 +1,39 @@
 const arc = require('@architect/functions');
 const slackMessage = require('@architect/shared/slackMessage');
+const config = require('@architect/shared/config');
 
 exports.handler = async function() {
-  console.log('Getting pending memes from DynamoDB');
+  await Promise.all(config.map(async team => {
+    if (!team.memeOfTheWeek) { return; }
 
-  const data = await arc.tables();
-  const pendingMemes = (await data.memes.scan({
-    FilterExpression: 'attribute_not_exists(isPosted)',
-  })).Items;
+    console.log('Getting pending memes from DynamoDB');
 
-  const memeList = pendingMemes.map((meme) => {
-    return `• ${meme.url} (from <@${meme.createdBy}>)`;
-  }).join("\n");
+    const data = await arc.tables();
+    const pendingMemes = (await data.memes.scan({
+      FilterExpression: 'attribute_not_exists(isPosted)',
+    })).Items;
 
-  console.log(`${pendingMemes.length} memes obtained.`);
+    const memeList = pendingMemes.map((meme) => {
+      return `• ${meme.url} (from <@${meme.createdBy}>)`;
+    }).join("\n");
 
-  console.log('Marking memes as posted');
+    console.log(`${pendingMemes.length} memes obtained.`);
 
-  await Promise.all(pendingMemes.map(meme => {
-    return data.memes.update({
-      Key: { memeID: meme.memeID },
-      UpdateExpression: 'set isPosted = :isPosted',
-      ExpressionAttributeValues: {
-        ':isPosted' : true,
-      }
-    });
-  }));
+    console.log('Marking memes as posted');
 
-  console.log('Generating message');
+    await Promise.all(pendingMemes.map(meme => {
+      return data.memes.update({
+        Key: { memeID: meme.memeID },
+        UpdateExpression: 'set isPosted = :isPosted',
+        ExpressionAttributeValues: {
+          ':isPosted' : true,
+        }
+      });
+    }));
 
-  const text = `Slothbot 9000 presents *MEME OF THE WEEK*!
+    console.log('Generating message');
+
+    const text = `Slothbot 9000 presents *MEME OF THE WEEK*!
 
 Your contenders for this week:
 
@@ -37,6 +41,7 @@ ${memeList}
 
 To add your own memes for next time, use \`/slothbot meme https://url-goes-here\` (or thread some here, I'm not your boss)`;
 
-  console.log('Sending to Slack');
-  return slackMessage({ text });
+    console.log('Sending to Slack');
+    return slackMessage(team, { text });
+  }));
 }
