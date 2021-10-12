@@ -10,12 +10,12 @@ If they aren't available, the backup sloth is :sloth: ${backup} :sloth:
 
 You can see our in-flight PRs at <https://sloth.engineering/today/|sloth.engineering>, or use the \`/prs\` slash command.`;
 
-const giraffeStandup = (main, backup) => `Today's King/Queen of the Giraffes is :giraffe_face: :crown: ${main} :crown: :giraffe_face:
+const giraffeStandup = (main, backup) => `Today's Prophet of the Giraffes is :giraffe_face: :crown: ${main} :crown: :giraffe_face:
 
 They'll be responsible for facilitating our standup meeting at 9.30.
 If they aren't available, the backup giraffe is :giraffe_face: ${backup} :giraffe_face:
 
-:giraffe_face: :giraffe_face: :giraffe_face: :giraffe_face: :giraffe_face:`;
+If you need inspiration for the question of the day, <https://andyhansen.co.nz/posts/stand-up-bonus-question|this> is a great list.`;
 
 const slothStandDown = `SLOTHS get SLOTHY — stand down in 15 mins!
 
