@@ -17,14 +17,15 @@ const MONDAYISED_HOLIDAYS = [ // Don't forget months are indexed from zero 🤡
   return d;
 });
 
-module.exports = function shouldIRun(_teamConfig) {
+module.exports = function shouldIRun(teamConfig) {
   // Remove this if you want to test the scheduled tasks in the staging environment
   if (process.env.NODE_ENV === 'staging') { return false; }
 
   const dateInNZST = utcToZonedTime(new Date(), 'Pacific/Auckland');
   const dayOfWeek = dateInNZST.getDay();
 
-  if (dayOfWeek === 0 || dayOfWeek === 6) { return false; }
+  const validDays = teamConfig.onlyOnDays || [1, 2, 3, 4, 5];
+  if (!validDays.includes(dayOfWeek)) { return false; }
 
   if (MONDAYISED_HOLIDAYS.find(d => {
     return format(d, 'yyyy-MM-dd') === formatTz(dateInNZST, 'yyyy-MM-dd');

@@ -39,6 +39,7 @@ module.exports = [
     name: 'giraffes',
     memeOfTheWeek: false,
     standupCaptains: ['katie', 'shannon', 'gavin', 'andrew', 'chron'],
+    onlyOnDays: [2, 4, 5],
     standupMessage: giraffeStandup,
     showPRs: false,
     webhookEnvVar: 'GIRAFFE_WEBHOOK',
