@@ -9,7 +9,7 @@ const shouldIRun = require('@architect/shared/shouldIRun');
 exports.handler = async function() {
   await Promise.all(config.map(async team => {
     if (!team.standDownMessage) { return; }
-    if (!shouldIRun()) { return; }
+    if (!shouldIRun(team)) { return; }
 
     const dateInNZST = utcToZonedTime(new Date(), 'Pacific/Auckland');
     const dayOfWeek = dateInNZST.getDay();
