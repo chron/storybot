@@ -6,8 +6,6 @@ const specialCases = [
 ];
 
 module.exports = function standDown(team, isItOnToday) {
-  if (!team.standDownMessage) { return null; }
-
   if (!isItOnToday) {
     return `No stand-down today.  Hope you are having a wonderful Friday!`
   }
