@@ -9,6 +9,7 @@ meme-of-the-week cron(0 21 ? * THU *)
 
 @http
 get /memes
+get /prs
 post /command/prs
 post /command/slothbot
 

@@ -15,6 +15,7 @@ module.exports = async function pullRequests({
   message,
   filterCriteria,
   ignoreUser,
+  raw = false,
 }) {
   try {
     const githubPRs = await Promise.all(labels.map(async label => {
@@ -94,13 +95,17 @@ module.exports = async function pullRequests({
       });
     }))
 
-    const githubPRsNeedingReviewer = githubPRs.flat().filter(filterCriteria);
+    const prsMeetingCriteria = githubPRs.flat().filter(filterCriteria);
+    const uniquePRs = prsMeetingCriteria.filter((pr, i) => {
+      return prsMeetingCriteria.findIndex(p => p.url === pr.url) === i;
+    });
 
-    if (!githubPRsNeedingReviewer.length) { return null; }
+    if (raw) { return uniquePRs }
+    if (!uniquePRs.length) { return null; }
 
     return `*${message}*
 
-${githubPRsNeedingReviewer.map(prToString).join("\n")}`;
+${uniquePRs.map(prToString).join("\n")}`;
   } catch (e) {
     console.error(e);
     return '(The github API request failed for some reason :grimacing:)';
