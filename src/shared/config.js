@@ -8,7 +8,9 @@ If they aren't available, the backup sloth is :sloth: ${backup} :sloth:
 *4.* _<question of the day>_ (<https://andyhansen.co.nz/posts/stand-up-bonus-question|inspiration list>)
 *5.* _Incoherent developer noises_
 
-You can see our in-flight PRs at <https://sloth.engineering/today/|sloth.engineering>, or use the \`/prs\` slash command.`;
+You can see our in-flight PRs at <https://sloth.engineering/today/|sloth.engineering>, or use the \`/prs\` slash command.
+
+Please also have a look at our <https://trello.com/b/sWNA1rWU/design-review-responsive-design-feedback-for-spa-community|SPA Community Design Review Trello board> :sloth:`;
 
 const giraffeStandup = (main, backup) => `Today's Prophet of the Giraffes is :giraffe_face: :crown: ${main} :crown: :giraffe_face:
 
@@ -23,7 +25,9 @@ You going to be present? :gift:
 Or you need to have your head down? :heads-down:
 Got any questions that you need people for? :interrobang:
 
-Everyone is welcome to join us in <https://meet.google.com/nxw-bjgg-ibd|this Google Meet>.`;
+Everyone is welcome to join us in <https://meet.google.com/nxw-bjgg-ibd|this Google Meet>.
+
+Please also have a look at our <https://trello.com/b/sWNA1rWU/design-review-responsive-design-feedback-for-spa-community|SPA Community Design Review Trello board> :sloth:`;
 
 module.exports = [
   {
