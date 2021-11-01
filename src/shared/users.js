@@ -13,6 +13,7 @@ module.exports.users = {
   AlexQuinlivan: '<@U08R7BSLR>', // Alex
   AaronThornton00: '<@U048FJY1K>', // Aaron
   sandemchad: '<@UFPJWKNGY>', // Chad
+  'Rob-Bee-Neilson': '<@UPE3KH494>', // Robbie
 
   // These ones aren't github usernames because these people aren't on github:
 
