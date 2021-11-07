@@ -17,6 +17,8 @@ const giraffeStandup = (main, backup) => `Today's Prophet of the Giraffes is :gi
 They'll be responsible for facilitating our standup meeting at 9.30.
 If they aren't available, the backup giraffe is :giraffe_face: ${backup} :giraffe_face:
 
+Standup will happen on the <https://miro.com/app/board/o9J_l4Tqg8E=/|Horizon 2 Miro board>.
+
 If you need inspiration for the question of the day, <https://andyhansen.co.nz/posts/stand-up-bonus-question|this> is a great list.`;
 
 const slothStandDown = `SLOTHS get SLOTHY — stand down in 15 mins!
@@ -42,7 +44,7 @@ module.exports = [
   {
     name: 'giraffes',
     memeOfTheWeek: false,
-    standupCaptains: ['katie', 'shannon', 'gavin', 'andrew', 'sarah', 'chron'],
+    standupCaptains: ['katie', 'shannon', 'gavin', 'andrew', 'sarah'],
     onlyOnDays: [2, 4, 5],
     standupMessage: giraffeStandup,
     showPRs: false,
