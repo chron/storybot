@@ -5,7 +5,7 @@ If they aren't available, the backup sloth is :sloth: ${backup} :sloth:
 *1.* What is blocking you?
 *2.* What help do you need?
 *3.* What comms need to happen?
-*4.* _<question of the day>_ (<https://andyhansen.co.nz/posts/stand-up-bonus-question|inspiration list>)
+*4.* _<question of the day>_ (<https://andyhansen.co.nz/posts/stand-up-bonus-question|inspiration 1>, <https://rendall.github.io/icebreakers/|inspiration 2>)
 *5.* _Incoherent developer noises_
 
 You can see our in-flight PRs at <https://sloth.engineering/today/|sloth.engineering>, or use the \`/prs\` slash command.
@@ -19,7 +19,7 @@ If they aren't available, the backup giraffe is :giraffe_face: ${backup} :giraff
 
 Standup will happen on the <https://miro.com/app/board/o9J_l4Tqg8E=/|Horizon 2 Miro board>.
 
-If you need inspiration for the question of the day, <https://andyhansen.co.nz/posts/stand-up-bonus-question|this> is a great list.`;
+If you need inspiration for the question of the day, <https://andyhansen.co.nz/posts/stand-up-bonus-question|this> or <https://rendall.github.io/icebreakers/|this> are great.`;
 
 const slothStandDown = `SLOTHS get SLOTHY — stand down in 15 mins!
 
@@ -35,7 +35,7 @@ module.exports = [
   {
     name: 'sloths',
     memeOfTheWeek: true,
-    standupCaptains: ['libbyschuknight', 'marielleaurabelle', 'chron', 'timothyjohn2015', 'willsmart'],
+    standupCaptains: ['libbyschuknight', 'sandemchad', 'chron', 'timothyjohn2015'],
     standupMessage: slothStandup,
     standDownMessage: slothStandDown,
     showPRs: true,
@@ -44,7 +44,7 @@ module.exports = [
   {
     name: 'giraffes',
     memeOfTheWeek: false,
-    standupCaptains: ['katie', 'shannon', 'gavin', 'andrew', 'sarah'],
+    standupCaptains: ['katie', 'shannon', 'gavin', 'andrew', 'sarah', 'willsmart'],
     onlyOnDays: [2, 4, 5],
     standupMessage: giraffeStandup,
     showPRs: false,
