@@ -1,5 +1,5 @@
-# Sloth-bot 9000
-## New fancy arc.codes edition!
+# Story-bot 9000
+## Powering Giraffe and Weka squads in Slack
 
 Currently consists of two scheduled tasks, one for the morning standup and one for the afternoon stand-down.  They live in src/scheduled.
 

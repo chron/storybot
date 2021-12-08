@@ -33,7 +33,7 @@ exports.handler = async function() {
 
     console.log('Generating message');
 
-    const text = `Slothbot 9000 presents *MEME OF THE WEEK*!
+    const text = `Weka Bot 9000 presents *MEME OF THE WEEK*!
 
 Your contenders for this week:
 
