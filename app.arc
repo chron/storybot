@@ -11,7 +11,7 @@ meme-of-the-week cron(0 21 ? * THU *)
 get /memes
 get /prs
 post /command/prs
-post /command/slothbot
+post /command/meme
 
 @tables
 memes

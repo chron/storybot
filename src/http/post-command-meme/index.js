@@ -5,28 +5,22 @@ module.exports.handler = async function(event) {
   const parsedBody = Buffer.from(event.body, 'base64').toString('utf-8');
   const bodyParams = new URLSearchParams(parsedBody);
   const params = Object.fromEntries(bodyParams);
-
-  const [command, ...restOfInput] = params.text.split(' ');
-  const memeUrl = restOfInput.join(' ').replace(/^\<|>$/g, '');
+  const memeUrl = params.text.replace(/^\<|>$/g, '');
 
   let responseText;
 
-  if (command === 'meme') {
-    if (memeUrl.match(/^\https?:\/\//)) {
-      let data = await arc.tables();
-      await data.memes.put({
-        memeID: nanoid(),
-        createdAt: new Date().toISOString(),
-        createdBy: params.user_id,
-        url: memeUrl,
-      })
+  if (memeUrl.match(/^\https?:\/\//)) {
+    let data = await arc.tables();
+    await data.memes.put({
+      memeID: nanoid(),
+      createdAt: new Date().toISOString(),
+      createdBy: params.user_id,
+      url: memeUrl,
+    })
 
-      responseText = `Thanks for your meme, <@${params.user_id}>!`;
-    } else {
-      responseText = 'Please provide a valid URL.';
-    }
+    responseText = `Thanks for your meme, <@${params.user_id}>!`;
   } else {
-    responseText = `Invalid command! Try ${params.command} meme ...`;
+    responseText = 'Please provide a valid URL.';
   }
 
   const body = JSON.stringify({

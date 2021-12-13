@@ -39,7 +39,7 @@ Your contenders for this week:
 
 ${memeList}
 
-To add your own memes for next time, use \`/slothbot meme https://url-goes-here\` (or thread some here, I'm not your boss)`;
+To add your own memes for next time, use \`/meme https://url-goes-here\` (or thread some here, I'm not your boss)`;
 
     console.log('Sending to Slack');
     return slackMessage(team, { text });
