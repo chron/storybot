@@ -28,9 +28,9 @@ If they aren't available, the Backup Owl is :ruru: ${backup} :ruru:
 *1.* What is blocking you?
 *2.* What help do you need?
 *3.* What comms need to happen?
-*4.* Activity of the day: Share a joke, a book/song/show/movie you like, do some stretching, have a dance-off, or ask a [question of the day](https://learnhip.com/randomq/).
+*4.* Activity of the day: Share a joke, a book/song/show/movie you like, do some stretching, have a dance-off, or ask a <https://learnhip.com/randomq/|question of the day>.
 
-Standup will be run against the [Ruru Trello board](https://trello.com/b/C73E32CS/ruru)`;
+Standup will be run against the <https://trello.com/b/C73E32CS/ruru|Ruru Trello board>`;
 
 const wekaStandDown = `Weka squad stand down in 15 mins!
 
