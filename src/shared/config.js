@@ -23,7 +23,7 @@ If you need inspiration for the question of the day, <https://andyhansen.co.nz/p
 
 const ruruStandup = (main, backup) => `Today's Chief Owl is :ruru: :crown: ${main} :crown: :ruru:
 They'll be responsible for facilitating our standup meeting at 9.15.
-If they aren't available, the Backup Weka is :ruru: ${backup} :ruru:
+If they aren't available, the Backup Owl is :ruru: ${backup} :ruru:
 
 *1.* What is blocking you?
 *2.* What help do you need?
