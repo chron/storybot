@@ -22,4 +22,5 @@ module.exports.users = {
   gavin: '<@U028PC9MZAB>', // Gavin
   andrew: '<@U06286ZSM>', // Andrew
   sarah: '<@UKWUY75RD>', // Sarah
+  alitia: '<@UUQ7T0FEU>', // Alitia
 };

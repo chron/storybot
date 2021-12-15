@@ -21,6 +21,17 @@ Standup will happen on the <https://miro.com/app/board/o9J_l4Tqg8E=/|Horizon 2 M
 
 If you need inspiration for the question of the day, <https://andyhansen.co.nz/posts/stand-up-bonus-question|this> or <https://rendall.github.io/icebreakers/|this> are great.`;
 
+const ruruStandup = (main, backup) => `Today's Chief Owl is :ruru: :crown: ${main} :crown: :ruru:
+They'll be responsible for facilitating our standup meeting at 9.15.
+If they aren't available, the Backup Weka is :ruru: ${backup} :ruru:
+
+*1.* What is blocking you?
+*2.* What help do you need?
+*3.* What comms need to happen?
+*4.* Activity of the day: Share a joke, a book/song/show/movie you like, do some stretching, have a dance-off, or ask a [question of the day](https://learnhip.com/randomq/).
+
+Standup will be run against the [Ruru Trello board](https://trello.com/b/C73E32CS/ruru)`;
+
 const wekaStandDown = `Weka squad stand down in 15 mins!
 
 You going to be present? :gift:
@@ -49,5 +60,13 @@ module.exports = [
     standupMessage: giraffeStandup,
     showPRs: false,
     webhookEnvVar: 'GIRAFFE_WEBHOOK',
+  },
+  {
+    name: 'ruru',
+    memeOfTheWeek: false,
+    standupCaptains: ['AaronThornton00', 'DanielJCampbell', 'marielleaurabelle', 'Rob-Bee-Neilson', 'alitia'],
+    standupMessage: ruruStandup,
+    showPRs: false,
+    webhookEnvVar: 'RURU_WEBHOOK'
   },
 ];
