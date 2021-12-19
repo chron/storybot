@@ -23,4 +23,10 @@ module.exports.users = {
   andrew: '<@U06286ZSM>', // Andrew
   sarah: '<@UKWUY75RD>', // Sarah
   alitia: '<@UUQ7T0FEU>', // Alitia
+  madeline: '<@U02BYBQ8BM5>', // Madeline
+  maddison: '<@U02J212V2P5>', // Maddison
+  lance: '<@U02H6SQA4DB>', // Lance
+  taylor: '<@U02JN7VC3EF>', // Taylor
+  shalita: '<@U01THA12EET>', // Shalita
+  kerry: '<@U01UP5F2G91>',  // Kerry
 };

@@ -42,6 +42,17 @@ Everyone is welcome to join us in <https://meet.google.com/nxw-bjgg-ibd|this Goo
 
 Please also have a look at our <https://trello.com/b/sWNA1rWU/design-review-responsive-design-feedback-for-spa-community|SPA Community Design Review Trello board> :bird:`;
 
+const csTeamStandup = (main, backup) => `Today's Chief is :crown: ${main} :crown:
+They'll be responsible for facilitating our standup meeting at 9.30.
+If they aren't available, the Backup is ${backup}.
+
+Remember, there is only 2-3 minutes for each person - your job is to keep them on track and the stand up moving along.
+
+1. What did you do yesterday?
+2. What will you do today?
+3. What is blocking you?
+4. <question of the day> (<https://andyhansen.co.nz/posts/stand-up-bonus-question|inspiration 1>, <https://rendall.github.io/icebreakers/|inspiration 2>)`
+
 module.exports = [
   {
     name: 'weka',
@@ -67,6 +78,14 @@ module.exports = [
     standupCaptains: ['AaronThornton00', 'DanielJCampbell', 'marielleaurabelle', 'Rob-Bee-Neilson', 'alitia'],
     standupMessage: ruruStandup,
     showPRs: false,
-    webhookEnvVar: 'RURU_WEBHOOK'
+    webhookEnvVar: 'RURU_WEBHOOK',
   },
+  {
+    name: 'csteam',
+    memeOfTheWeek: false,
+    standupCaptains: ['madeline', 'maddison', 'lance', 'taylor', 'shalita', 'kerry'],
+    standupMessage: csTeamStandup,
+    showPRs: false,
+    webhookEnvVar: 'CSTEAM_WEBHOOK',
+  }
 ];
