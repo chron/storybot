@@ -4,7 +4,6 @@ module.exports.handler = async function() {
   const data = await arc.tables();
 
   // TODO: if this gets big later, should probably use a GSI?
-
   const pendingMemes = await data.memes.scan({
     FilterExpression: 'attribute_not_exists(isPosted)',
   });

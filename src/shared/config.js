@@ -62,6 +62,7 @@ module.exports = [
     standDownMessage: wekaStandDown,
     showPRs: true,
     webhookEnvVar: 'SLOTH_WEBHOOK',
+    paused: true,
   },
   {
     name: 'giraffes',
@@ -71,6 +72,7 @@ module.exports = [
     standupMessage: giraffeStandup,
     showPRs: false,
     webhookEnvVar: 'GIRAFFE_WEBHOOK',
+    paused: true,
   },
   {
     name: 'ruru',
@@ -79,6 +81,7 @@ module.exports = [
     standupMessage: ruruStandup,
     showPRs: false,
     webhookEnvVar: 'RURU_WEBHOOK',
+    paused: true,
   },
   {
     name: 'csteam',
@@ -87,5 +90,6 @@ module.exports = [
     standupMessage: csTeamStandup,
     showPRs: false,
     webhookEnvVar: 'CSTEAM_WEBHOOK',
+    paused: true,
   }
 ];

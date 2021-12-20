@@ -6,7 +6,6 @@ module.exports.handler = async function(event) {
   const bodyParams = new URLSearchParams(parsedBody);
   const params = Object.fromEntries(bodyParams);
 
-
   const [ignoreUser] = Object.entries(users).find(([githubName,slackName]) => {
     return slackName === `<@${params.user_id}>`;
   }) || [];

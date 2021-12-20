@@ -5,6 +5,7 @@ const config = require('@architect/shared/config');
 exports.handler = async function() {
   await Promise.all(config.map(async team => {
     if (!team.memeOfTheWeek) { return; }
+    if (team.paused) { return; }
 
     console.log('Getting pending memes from DynamoDB');
 

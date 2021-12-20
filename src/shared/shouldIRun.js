@@ -20,6 +20,7 @@ const MONDAYISED_HOLIDAYS = [ // Don't forget months are indexed from zero 🤡
 module.exports = function shouldIRun(teamConfig) {
   // Remove this if you want to test the scheduled tasks in the staging environment
   if (process.env.NODE_ENV === 'staging') { return false; }
+  if (teamConfig.paused) { return false; }
 
   const dateInNZST = utcToZonedTime(new Date(), 'Pacific/Auckland');
   const dayOfWeek = dateInNZST.getDay();
