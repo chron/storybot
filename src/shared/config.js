@@ -57,7 +57,11 @@ module.exports = [
   {
     name: 'weka',
     memeOfTheWeek: true,
-    standupCaptains: ['libbyschuknight', 'sandemchad', 'chron', 'timothyjohn2015'],
+    standupCaptains: ['libbyschuknight', 'sandemchad', 'timothyjohn2015', 'fourseven', 'eileen', 'dave'],
+    captainDayExceptions: {
+      2: ['eileen'],
+      4: ['eileen', 'sandemchad'],
+    },
     standupMessage: wekaStandup,
     standDownMessage: wekaStandDown,
     showPRs: true,
@@ -67,7 +71,7 @@ module.exports = [
   {
     name: 'giraffes',
     memeOfTheWeek: false,
-    standupCaptains: ['katie', 'shannon', 'gavin', 'andrew', 'sarah', 'willsmart'],
+    standupCaptains: ['katie', 'shannon', 'gavin', 'andrew', 'sarah', 'chron'],
     onlyOnDays: [2, 4, 5],
     standupMessage: giraffeStandup,
     showPRs: false,

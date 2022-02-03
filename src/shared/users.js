@@ -29,4 +29,6 @@ module.exports.users = {
   taylor: '<@U02JN7VC3EF>', // Taylor
   shalita: '<@U01THA12EET>', // Shalita
   kerry: '<@U01UP5F2G91>',  // Kerry
+  eileen: '<@ULHKU7MQW>',  // Eileen
+  dave: '<@U01KNSCGVFW>',  // Dave Keyes
 };

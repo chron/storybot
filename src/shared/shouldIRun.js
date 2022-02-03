@@ -5,6 +5,7 @@ const add = require('date-fns/add');
 
 const CURRENT_YEAR = new Date().getFullYear();
 const MONDAYISED_HOLIDAYS = [ // Don't forget months are indexed from zero 🤡
+  new Date(CURRENT_YEAR, 1, 6), // Waitangi day
   new Date(CURRENT_YEAR, 3, 25), // Anzac day
   new Date(CURRENT_YEAR, 5, 7), // Queen's birthday
 ].map(d => {

@@ -14,7 +14,14 @@ module.exports = function standup(team, userNames) {
   const c = specialCases.find(([d]) => d === formatTz(dateInNZST, 'yyyy-MM-dd'));
   if (c) { return c[1]; }
 
-  const [main, backup] = shuffle(team.standupCaptains);
+  const day = dateInNZST.getDay();
+  const eligibleCaptains = team.standupCaptains.filter(c => {
+    if (!team.captainDayExceptions) return true;
+    const exceptions = team.captainDayExceptions[day] || [];
+    return !exceptions.includes(c);
+  });
+
+  const [main, backup] = shuffle(eligibleCaptains);
 
   return team.standupMessage(userNames[main], userNames[backup]);
 }
