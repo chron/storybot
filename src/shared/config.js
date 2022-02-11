@@ -56,7 +56,7 @@ Remember, there is only 2-3 minutes for each person - your job is to keep them o
 module.exports = [
   {
     name: 'weka',
-    memeOfTheWeek: true,
+    memeOfTheWeek: false,
     standupCaptains: ['libbyschuknight', 'sandemchad', 'timothyjohn2015', 'fourseven', 'eileen', 'dave'],
     captainDayExceptions: {
       2: ['eileen'],
