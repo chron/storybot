@@ -81,11 +81,11 @@ module.exports = [
   {
     name: 'ruru',
     memeOfTheWeek: false,
-    standupCaptains: ['AaronThornton00', 'DanielJCampbell', 'marielleaurabelle', 'Rob-Bee-Neilson', 'alitia'],
+    standupCaptains: ['AaronThornton00', 'marielleaurabelle', 'Rob-Bee-Neilson'],
     standupMessage: ruruStandup,
     showPRs: false,
     webhookEnvVar: 'RURU_WEBHOOK',
-    // paused: true,
+    paused: true,
   },
   {
     name: 'csteam',
