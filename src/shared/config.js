@@ -76,7 +76,7 @@ module.exports = [
     standupMessage: giraffeStandup,
     showPRs: false,
     webhookEnvVar: 'GIRAFFE_WEBHOOK',
-    // paused: true,
+    paused: true,
   },
   {
     name: 'ruru',
