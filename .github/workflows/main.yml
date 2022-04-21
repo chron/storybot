@@ -31,4 +31,8 @@ jobs:
           echo "region=ap-southeast-2" >> ~/.aws/config
           npm install
           npx arc env production SPGITHUB_TOKEN $SPGITHUB_TOKEN
+          npx arc env production SLOTH_WEBHOOK $SLOTH_WEBHOOK
+          npx arc env production RURU_WEBHOOK $RURU_WEBHOOK
+          npx arc env production GIRAFFE_WEBHOOK $GIRAFFE_WEBHOOK
+          npx arc env production CSTEAM_WEBHOOK $CSTEAM_WEBHOOK
           npm run deploy --production
