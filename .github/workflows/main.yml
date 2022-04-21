@@ -25,7 +25,7 @@ jobs:
           echo "CSTEAM_WEBHOOK=$CSTEAM_WEBHOOK" >> ./.env
           mkdir ~/.aws
           echo "[weka-deploy]" >> ~/.aws/credentials
-          echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+          echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID"
           echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY"
           cat ~/.aws/credentials
           npm run deploy --production
