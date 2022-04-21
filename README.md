@@ -9,12 +9,12 @@ The Github access is done using their GraphQL API.
 
 ## Deploying to AWS
 
-You'll need an AWS profile called `slothsquad` set up in your `~/.aws/credentials`.  You'll also need to set up a few environment variables:
+You'll need an AWS profile called `weka-deploy` set up in your `~/.aws/credentials`.  You'll also need to set up a few environment variables:
 
 | Variable | Description |
 | -------- | ----------- |
-| SLACK_WEBHOOK | The full URL of the Slack webhook to use for sending messages. |
-| GITHUB_PERSONAL_ACCESS_TOKEN | Github token to use when searching for PR info. |
+| \<team\>_WEBHOOK | The full URL of the Slack webhook to use for sending messages. Check `src/shared/config.js` for valid teams|
+| SPGITHUB_TOKEN | Github token to use when searching for PR info. |
 
 Once you have that in place you can run
 
@@ -23,3 +23,6 @@ npm run deploy
 ```
 
 Which will deploy the Staging stack. Add `--production` to deploy to the Production stack.
+
+## New Starters
+Update `src/shared/users.js` with your github username and slack id
