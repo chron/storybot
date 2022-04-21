@@ -22,5 +22,5 @@ memes
   url String
 
 @aws
-profile slothsquad
+profile weka-deploy
 region ap-southeast-2
