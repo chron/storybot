@@ -8,9 +8,7 @@ If they aren't available, the Backup Weka is :bird: ${backup} :bird:
 *4.* _<question of the day>_ (<https://andyhansen.co.nz/posts/stand-up-bonus-question|inspiration 1>, <https://rendall.github.io/icebreakers/|inspiration 2>)
 *5.* _Incoherent developer noises_
 
-You can see our in-flight PRs at <https://weka.digital/today/|weka.digital>, or use the \`/prs\` slash command.
-
-Please also have a look at our <https://trello.com/b/sWNA1rWU/design-review-responsive-design-feedback-for-spa-community|SPA Community Design Review Trello board> :bird:`;
+You can see our in-flight PRs at <https://weka.digital/today/|weka.digital>, or use the \`/prs\` slash command.`;
 
 const giraffeStandup = (main, backup) => `Today's Prophet of the Giraffes is :giraffe_face: :crown: ${main} :crown: :giraffe_face:
 
