@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "arc sandbox",
-    "deploy": "arc deploy"
+    "deploy": "arc deploy --production"
   },
   "dependencies": {
     "@architect/functions": "^4.0.0",
