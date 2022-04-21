@@ -25,8 +25,8 @@ jobs:
           echo "CSTEAM_WEBHOOK=$CSTEAM_WEBHOOK" >> ./.env
           mkdir ~/.aws
           echo "[weka-deploy]" > ~/.aws/credentials
-          echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> ~/.aws/credentials
-          echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY"  >> ~/.aws/credentials
+          echo "aws_access_key_id=$AWS_ACCESS_KEY_ID" >> ~/.aws/credentials
+          echo "aws_secret_access_key=$AWS_SECRET_ACCESS_KEY"  >> ~/.aws/credentials
           echo "[profile weka-deploy]" > ~/.aws/config
           echo "region=ap-southeast-2" >> ~/.aws/config
           npm install
