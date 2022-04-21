@@ -30,4 +30,5 @@ jobs:
           echo "[profile weka-deploy]" > ~/.aws/config
           echo "region=ap-southeast-2" >> ~/.aws/config
           npm install
+          npx arc env production SPGITHUB_TOKEN $SPGITHUB_TOKEN
           npm run deploy --production
