@@ -29,7 +29,16 @@ exports.handler = async function() {
         filterCriteria: (pr) => pr.author && pr.assignees.length < 2
       }));
 
-      console.log('In between');
+      console.log('Added PRs waiting for reviewers');
+
+      text.push(await pullRequests({
+        users,
+        labels: ['1. Ready for code review'],
+        message: 'Pull requests currently in review:',
+        filterCriteria: (pr) => pr.author && pr.assignees.length === 2
+      }));
+
+      console.log('Added PRs currently in review');
 
       text.push(await pullRequests({
         users,
