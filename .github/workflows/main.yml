@@ -2,7 +2,7 @@ name: Trigger AWS Deploy
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 jobs:
   build_deploy:
     runs-on: ubuntu-latest
