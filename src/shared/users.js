@@ -30,6 +30,8 @@ module.exports.users = {
   shalita: '<@U01THA12EET>', // Shalita
   kerry: '<@U01UP5F2G91>',  // Kerry
   eileen: '<@ULHKU7MQW>',  // Eileen
+  charlotte: '<@ULHKU7MQS>',  // Charlotte
+  natalie: '<@ULHKU7MQS>',  // Natalie
   dave: '<@U01KNSCGVFW>',  // Dave Keyes
   abbie: '<@U035HE79WFP>', // Abbie
 };
