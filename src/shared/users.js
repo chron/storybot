@@ -32,4 +32,5 @@ module.exports.users = {
   eileen: '<@ULHKU7MQW>',  // Eileen
   dave: '<@U01KNSCGVFW>',  // Dave Keyes
   abbie: '<@U035HE79WFP>', // Abbie
+  charlotte: '<@U035HE79WFP>', // Charlotte
 };

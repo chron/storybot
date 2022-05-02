@@ -1,5 +1,5 @@
 const wekaStandup = (main, backup) => `Today's Chief Weka is :bird: :crown: ${main} :crown: :bird:
-They'll be responsible for facilitating our standup meeting at 9.15.
+They'll be responsible for facilitating our standup meeting at 9.30.
 If they aren't available, the Backup Weka is :bird: ${backup} :bird:
 
 *1.* What is blocking you?
@@ -55,10 +55,11 @@ module.exports = [
   {
     name: 'weka',
     memeOfTheWeek: false,
-    standupCaptains: ['libbyschuknight', 'sandemchad', 'timothyjohn2015', 'fourseven', 'eileen', 'dave'],
+    standupCaptains: ['libbyschuknight', 'sandemchad', 'timothyjohn2015', 'fourseven', 'eileen', 'dave', 'nat', 'Charlotte' ],
     captainDayExceptions: {
       2: ['eileen'],
-      4: ['eileen', 'sandemchad'],
+      4: ['eileen', 'Charlotte'],
+      5: ['Charlotte', 'nat'],
     },
     standupMessage: wekaStandup,
     standDownMessage: wekaStandDown,
