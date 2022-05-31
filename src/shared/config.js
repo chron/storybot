@@ -55,11 +55,11 @@ module.exports = [
   {
     name: 'weka',
     memeOfTheWeek: false,
-    standupCaptains: ['libbyschuknight', 'timothyjohn2015', 'fourseven', 'eileen', 'dave', 'nat', 'Charlotte' ],
+    standupCaptains: ['libbyschuknight', 'timothyjohn2015', 'fourseven', 'eileen', 'dave', 'nat', 'charlotte' ],
     captainDayExceptions: {
       2: ['eileen'],
-      4: ['eileen', 'Charlotte'],
-      5: ['Charlotte', 'nat'],
+      4: ['eileen', 'charlotte'],
+      5: ['charlotte', 'nat'],
     },
     standupMessage: wekaStandup,
     standDownMessage: wekaStandDown,
