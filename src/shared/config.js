@@ -89,7 +89,7 @@ module.exports = [
   {
     name: 'csteam',
     memeOfTheWeek: false,
-    standupCaptains: ['madeline', 'maddison', 'lance', 'taylor', 'shalita', 'kerry', 'abbie'],
+    standupCaptains: ['maddy', 'geena', 'shalita', 'kerry', 'abbie'],
     standupMessage: csTeamStandup,
     showPRs: false,
     webhookEnvVar: 'CSTEAM_WEBHOOK',
