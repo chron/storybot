@@ -30,16 +30,6 @@ If they aren't available, the Backup Owl is :ruru: ${backup} :ruru:
 
 Standup will be run against the <https://trello.com/b/C73E32CS/ruru|Ruru Trello board>`;
 
-const wekaStandDown = `Weka squad stand down in 15 mins!
-
-You going to be present? :gift:
-Or you need to have your head down? :heads-down:
-Got any questions that you need people for? :interrobang:
-
-Everyone is welcome to join us in <https://meet.google.com/nxw-bjgg-ibd|this Google Meet>.
-
-Please also have a look at our <https://trello.com/b/sWNA1rWU/design-review-responsive-design-feedback-for-spa-community|SPA Community Design Review Trello board> :bird:`;
-
 const csTeamStandup = (main, backup) => `Today's Chief is :crown: ${main} :crown:
 They'll be responsible for facilitating our standup meeting at 9.30.
 If they aren't available, the Backup is ${backup}.
@@ -54,7 +44,6 @@ Remember, there is only 2-3 minutes for each person - your job is to keep them o
 module.exports = [
   {
     name: 'weka',
-    memeOfTheWeek: false,
     standupCaptains: ['libbyschuknight', 'timothyjohn2015', 'fourseven', 'eileen', 'dave', 'nat', 'charlotte' ],
     captainDayExceptions: {
       2: ['eileen'],
@@ -62,14 +51,12 @@ module.exports = [
       5: ['charlotte', 'nat'],
     },
     standupMessage: wekaStandup,
-    standDownMessage: wekaStandDown,
     showPRs: true,
     webhookEnvVar: 'SLOTH_WEBHOOK',
     // paused: true,
   },
   {
     name: 'giraffes',
-    memeOfTheWeek: false,
     standupCaptains: ['katie', 'shannon', 'gavin', 'andrew', 'sarah', 'chron'],
     onlyOnDays: [2, 4, 5],
     standupMessage: giraffeStandup,
@@ -79,7 +66,6 @@ module.exports = [
   },
   {
     name: 'ruru',
-    memeOfTheWeek: false,
     standupCaptains: ['AaronThornton00', 'marielleaurabelle', 'Rob-Bee-Neilson'],
     standupMessage: ruruStandup,
     showPRs: false,
@@ -88,7 +74,6 @@ module.exports = [
   },
   {
     name: 'csteam',
-    memeOfTheWeek: false,
     standupCaptains: ['maddy', 'geena', 'shalita', 'kerry', 'abbie'],
     standupMessage: csTeamStandup,
     showPRs: false,
