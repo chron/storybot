@@ -9,7 +9,6 @@
     "src/shared/shouldIRun.js",
     "src/shared/shuffle.js",
     "src/shared/slackMessage.js",
-    "src/shared/standDown.js",
     "src/shared/standup.js",
     "src/shared/users.js"
   ],
