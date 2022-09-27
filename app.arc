@@ -3,7 +3,9 @@ slothbot
 
 @scheduled
 # These times are in UTC and will therefore break horribly during DST 😰
-daily-standup cron(30 20 * * ? *)
+# NZST - use 30 20 * * ? *
+# NZDT - use 30 19 * * ? *
+daily-standup cron(30 19 * * ? *)
 
 @http
 get /prs
