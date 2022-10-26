@@ -9,6 +9,7 @@ module.exports.users = {
   AaronThornton00: '<@U048FJY1K>', // Aaron
   'Rob-Bee-Neilson': '<@UPE3KH494>', // Robbie
   StoryparkNick: '<@U03TVGDFWF9>', // Nick
+  'opal-storypark': '<@U047FJT9SKZ>', // Opal
 
   // These ones aren't github usernames because these people aren't on github:
   katie: '<@U01KA1D3G78>', // Katie
