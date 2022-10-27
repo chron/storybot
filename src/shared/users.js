@@ -1,4 +1,10 @@
 // This maps Github usernames -> Slack userIds
+
+// You can find your Slack Member ID by:
+//  1. open your profile by selecting your profile picture in the top right, and selecting `Profile`
+//  2. Open the 3-dot menu next to `Edit status`
+//  3. Select `Copy member ID`.
+
 module.exports.users = {
   libbyschuknight: '<@URA1E530R>', // Libby
   'louisa-storypark': '<@UB544UWJZ>', // Louisa
@@ -9,6 +15,7 @@ module.exports.users = {
   AaronThornton00: '<@U048FJY1K>', // Aaron
   'Rob-Bee-Neilson': '<@UPE3KH494>', // Robbie
   StoryparkNick: '<@U03TVGDFWF9>', // Nick
+  'opal-storypark': '<@U047FJT9SKZ>', // Opal
 
   // These ones aren't github usernames because these people aren't on github:
   katie: '<@U01KA1D3G78>', // Katie

@@ -31,4 +31,4 @@ npm run deploy
 Which will deploy the Staging stack. Add `--production` to deploy to the Production stack.
 
 ## New Starters
-Update `src/shared/users.js` with your github username and slack id
+Update `src/shared/users.js` with your github username and slack id, and if you're feeling adventurous update your team's config in `src/shared/config.js`
