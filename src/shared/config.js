@@ -44,11 +44,11 @@ Remember, there is only 2-3 minutes for each person - your job is to keep them o
 module.exports = [
   {
     name: 'weka',
-    standupCaptains: ['libbyschuknight', 'timothyjohn2015', 'fourseven', 'eileen', 'dave', 'nat', 'charlotte', 'StoryparkNick', 'opal-storypark'],
+    standupCaptains: ['libbyschuknight', 'timothyjohn2015', 'eileen', 'dave', 'nat', 'charlotte', 'StoryparkNick', 'opal-storypark'],
     captainDayExceptions: {
       2: ['eileen'],
       4: ['eileen', 'charlotte'],
-      5: ['charlotte', 'nat'],
+      5: ['charlotte', 'nat', 'StoryparkNick'],
     },
     standupMessage: wekaStandup,
     showPRs: true,
