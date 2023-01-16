@@ -33,4 +33,5 @@ module.exports.users = {
   charlotte: '<@U02BZ4Z9DRD>', // Charlotte
   nat: '<@U039RN8T97E>', // Nat
   geena: '<@U03EH7JELTT>', // Geena
+  david: '<@U04BAC97XPU>', // David
 };
