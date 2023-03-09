@@ -1,14 +1,6 @@
 const wekaStandup = (main, backup) => `Today's Chief Weka is :bird: :crown: ${main} :crown: :bird:
 They'll be responsible for facilitating our standup meeting at 9.30.
-If they aren't available, the Backup Weka is :bird: ${backup} :bird:
-
-*1.* What is blocking you?
-*2.* What help do you need?
-*3.* What comms need to happen?
-*4.* _<question of the day>_ (<https://andyhansen.co.nz/posts/stand-up-bonus-question|inspiration 1>, <https://rendall.github.io/icebreakers/|inspiration 2>)
-*5.* _Incoherent developer noises_
-
-You can see our in-flight PRs at <https://weka.digital/today/|weka.digital>, or use the \`/prs\` slash command.`;
+If they aren't available, the Backup Weka is :bird: ${backup} :bird:`;
 
 const giraffeStandup = (main, backup) => `Today's Prophet of the Giraffes is :giraffe_face: :crown: ${main} :crown: :giraffe_face:
 
@@ -44,14 +36,23 @@ Remember, there is only 2-3 minutes for each person - your job is to keep them o
 module.exports = [
   {
     name: 'weka',
-    standupCaptains: ['libbyschuknight', 'timothyjohn2015', 'eileen', 'dave', 'nat', 'charlotte', 'StoryparkNick', 'opal-storypark'],
+    standupCaptains: [
+      'timothyjohn2015',
+      'eileen',
+      'dave',
+      'nat',
+      'charlotte',
+      'StoryparkNick',
+      'opal-storypark',
+      'AaronThornton00',
+    ],
     captainDayExceptions: {
       2: ['eileen'],
       4: ['eileen', 'charlotte'],
       5: ['charlotte', 'nat', 'StoryparkNick'],
     },
     standupMessage: wekaStandup,
-    showPRs: true,
+    showPRs: false,
     webhookEnvVar: 'SLOTH_WEBHOOK',
     // paused: true,
   },
@@ -66,7 +67,7 @@ module.exports = [
   },
   {
     name: 'ruru',
-    standupCaptains: ['AaronThornton00', 'marielleaurabelle', 'Rob-Bee-Neilson'],
+    standupCaptains: ['libbyschuknight', 'marielleaurabelle', 'Rob-Bee-Neilson'],
     standupMessage: ruruStandup,
     showPRs: false,
     webhookEnvVar: 'RURU_WEBHOOK',
