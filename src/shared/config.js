@@ -47,9 +47,11 @@ module.exports = [
       'AaronThornton00',
     ],
     captainDayExceptions: {
+      1: ['eileen'],
       2: ['eileen'],
+      3: ['eileen'],
       4: ['eileen', 'charlotte'],
-      5: ['charlotte', 'nat', 'StoryparkNick'],
+      5: ['eileen', 'charlotte', 'nat', 'StoryparkNick'],
     },
     standupMessage: wekaStandup,
     showPRs: false,
