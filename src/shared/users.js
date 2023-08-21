@@ -28,7 +28,6 @@ module.exports.users = {
   kerry: '<@U01UP5F2G91>',  // Kerry
   eileen: '<@ULHKU7MQW>',  // Eileen
   dave: '<@U01KNSCGVFW>',  // Dave Keyes
-  abbie: '<@U035HE79WFP>', // Abbie
   charlotte: '<@U02BZ4Z9DRD>', // Charlotte
   nat: '<@U039RN8T97E>', // Nat
   geena: '<@U03EH7JELTT>', // Geena
