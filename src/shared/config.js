@@ -77,7 +77,7 @@ module.exports = [
   },
   {
     name: 'csteam',
-    standupCaptains: ['geena', 'kerry', 'david'],
+    standupCaptains: ['geena', 'kerry', 'david', 'erika', 'sabeena'],
     standupMessage: csTeamStandup,
     showPRs: false,
     webhookEnvVar: 'CSTEAM_WEBHOOK',

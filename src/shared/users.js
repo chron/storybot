@@ -32,4 +32,6 @@ module.exports.users = {
   nat: '<@U039RN8T97E>', // Nat
   geena: '<@U03EH7JELTT>', // Geena
   david: '<@U04BAC97XPU>', // David
+  sabeena: '<@U05SQ9CD7D0>', // Sabeena
+  erika: '<@U05TD96P59N>', // Erika
 };
