@@ -1,5 +1,5 @@
 const wekaStandup = (main, backup) => `Today's Chief Weka is :bird: :crown: ${main} :crown: :bird:
-They'll be responsible for facilitating our standup meeting at 9.30.
+They'll be responsible for facilitating our standup meeting at 11.30.
 If they aren't available, the Backup Weka is :bird: ${backup} :bird:`;
 
 const giraffeStandup = (main, backup) => `Today's Prophet of the Giraffes is :giraffe_face: :crown: ${main} :crown: :giraffe_face:
