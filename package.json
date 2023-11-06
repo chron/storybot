@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@architect/architect": "^9.2.1"
+    "@architect/architect": "^10.16.1"
   },
   "scripts": {
     "start": "arc sandbox",
