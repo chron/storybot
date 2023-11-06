@@ -2,26 +2,6 @@ const wekaStandup = (main, backup) => `Today's Chief Weka is :bird: :crown: ${ma
 They'll be responsible for facilitating our standup meeting at 11.30.
 If they aren't available, the Backup Weka is :bird: ${backup} :bird:`;
 
-const giraffeStandup = (main, backup) => `Today's Prophet of the Giraffes is :giraffe_face: :crown: ${main} :crown: :giraffe_face:
-
-They'll be responsible for facilitating our standup meeting at 9.30.
-If they aren't available, the backup giraffe is :giraffe_face: ${backup} :giraffe_face:
-
-Standup will happen on the <https://miro.com/app/board/o9J_l4Tqg8E=/|Horizon 2 Miro board>.
-
-If you need inspiration for the question of the day, <https://andyhansen.co.nz/posts/stand-up-bonus-question|this> or <https://rendall.github.io/icebreakers/|this> are great.`;
-
-const ruruStandup = (main, backup) => `Today's Chief Owl is :ruru: :crown: ${main} :crown: :ruru:
-They'll be responsible for facilitating our standup meeting at 9.15.
-If they aren't available, the Backup Owl is :ruru: ${backup} :ruru:
-
-*1.* What is blocking you?
-*2.* What help do you need?
-*3.* What comms need to happen?
-*4.* Activity of the day: Share a joke, a book/song/show/movie you like, do some stretching, have a dance-off, or ask a <https://learnhip.com/randomq/|question of the day>.
-
-Standup will be run against the <https://trello.com/b/C73E32CS/ruru|Ruru Trello board>`;
-
 const csTeamStandup = (main, backup) => `Today's Chief is :crown: ${main} :crown:
 They'll be responsible for facilitating our standup meeting at 9.30.
 If they aren't available, the Backup is ${backup}.
@@ -48,32 +28,13 @@ module.exports = [
       5: ['nat'],
     },
     standupMessage: wekaStandup,
-    showPRs: false,
     webhookEnvVar: 'SLOTH_WEBHOOK',
     // paused: true,
-  },
-  {
-    name: 'giraffes',
-    standupCaptains: ['katie', 'shannon', 'gavin', 'andrew', 'sarah', 'chron'],
-    onlyOnDays: [2, 4, 5],
-    standupMessage: giraffeStandup,
-    showPRs: false,
-    webhookEnvVar: 'GIRAFFE_WEBHOOK',
-    paused: true,
-  },
-  {
-    name: 'ruru',
-    standupCaptains: ['libbyschuknight', 'marielleaurabelle', 'Rob-Bee-Neilson'],
-    standupMessage: ruruStandup,
-    showPRs: false,
-    webhookEnvVar: 'RURU_WEBHOOK',
-    paused: true,
   },
   {
     name: 'csteam',
     standupCaptains: ['geena', 'kerry', 'david', 'erika', 'sabeena'],
     standupMessage: csTeamStandup,
-    showPRs: false,
     webhookEnvVar: 'CSTEAM_WEBHOOK',
     // paused: true,
   }

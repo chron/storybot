@@ -12,16 +12,10 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SPGITHUB_TOKEN: ${{ secrets.SPGITHUB_TOKEN }}
           SLOTH_WEBHOOK: ${{ secrets.SLOTH_WEBHOOK }}
-          RURU_WEBHOOK: ${{ secrets.RURU_WEBHOOK }}
-          GIRAFFE_WEBHOOK: ${{ secrets.GIRAFFE_WEBHOOK }}
           CSTEAM_WEBHOOK: ${{ secrets.CSTEAM_WEBHOOK }}
         run: |
-          echo "SPGITHUB_TOKEN=$SPGITHUB_TOKEN" > ./.env
           echo "SLOTH_WEBHOOK=$SLOTH_WEBHOOK" >> ./.env
-          echo "RURU_WEBHOOK=$RURU_WEBHOOK" >> ./.env
-          echo "GIRAFFE_WEBHOOK=$GIRAFFE_WEBHOOK" >> ./.env
           echo "CSTEAM_WEBHOOK=$CSTEAM_WEBHOOK" >> ./.env
           mkdir ~/.aws
           echo "[weka-deploy]" > ~/.aws/credentials
@@ -30,9 +24,6 @@ jobs:
           echo "[profile weka-deploy]" > ~/.aws/config
           echo "region=ap-southeast-2" >> ~/.aws/config
           npm install
-          npx arc env production SPGITHUB_TOKEN $SPGITHUB_TOKEN
           npx arc env production SLOTH_WEBHOOK $SLOTH_WEBHOOK
-          npx arc env production RURU_WEBHOOK $RURU_WEBHOOK
-          npx arc env production GIRAFFE_WEBHOOK $GIRAFFE_WEBHOOK
           npx arc env production CSTEAM_WEBHOOK $CSTEAM_WEBHOOK
           npm run deploy --production

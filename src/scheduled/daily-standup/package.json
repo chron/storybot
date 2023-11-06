@@ -5,7 +5,6 @@
   "_parsed": [
     "index.js",
     "src/shared/config.js",
-    "src/shared/pullRequests.js",
     "src/shared/shouldIRun.js",
     "src/shared/shuffle.js",
     "src/shared/slackMessage.js",
